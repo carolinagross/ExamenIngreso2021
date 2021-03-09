@@ -11,6 +11,11 @@ function mostrar()
 	let contMayores =0;
 	let contJovenes =0;
 	let totalpasajeros;
+	let flag =1;
+	let contMayoresViudos =0;
+	let preciosindescuento;
+	let precioFinal;
+
 
 do{
 
@@ -26,7 +31,7 @@ while (edad < 17)
 	edad = parseInt(prompt("ingrese su edad"));
 }
 temperaturaCorporal = parseInt(prompt("ingrese su temperatura"));
-while( isNaN(temperatura) || temperatura <0 ){
+while( isNaN(temperaturaCorporal) || temperaturaCorporal <0 ){
 	temperaturaCorporal = parseInt(prompt("ingrese su temperatura"));
 }
 sexo = prompt("ingrese su sexo");
@@ -35,15 +40,16 @@ while ( sexo!= "f" &&   sexo!= "m") {
 }
 
 
-if ( estado == "viudo" && edad > 60){
+if ( estadoCivil == "viudo" && edad > 60){
 	contMayoresViudos ++; //punto a
 }
-if (flag || ( edad < edadMinima && sexo == "f")
-	{
+if (sexo == "f" ){
+if(estadoCivil == "soltero" && (flag || edad < edadMinima)){
 		edadMinima = edad;
-	nombreMinimo = nombre;// punto b
+	nombreMinimo = nombre;
+	flag=0;// punto b
 	}
-
+}
 
 if ( edad >= 60){
 	contMayores++;
@@ -51,13 +57,29 @@ if ( edad >= 60){
 	contJovenes++;
 }
 
-preciosindescuento = CONSTPRECIO * (contMayores + contJovenes); // punto c
- totalpasajeros = contJovenes + contMayores
- if (contMayores > totalpasajeros*50/100 ){
-	precioFinal=  preciosindescuento * 25/100;
+
 
 seguir = prompt("desea ingresar mas datos");
  } while (seguir == "s")
 
+
+ totalpasajeros = contMayores + contJovenes;
+preciosindescuento = CONSTPRECIO * totalpasajeros; // punto c
+ 
+
+
+console.log("el viaje total sin descuento es "+ preciosindescuento);
+
+ if (contMayores > totalpasajeros*50/100 ){
+	precioFinal=  preciosindescuento - preciosindescuento * 25/100;
+	console.log("el precio con descuento es " +  precioFinal);
 }
-}
+
+
+
+
+  console.log("los viudos mayres de 60 son " + contMayoresViudos);
+  console.log("la mujer soltera mas joven se llama " + nombreMinimo +"y tiene " + edadMinima );
+ 
+  
+}// corchete de la funcio 

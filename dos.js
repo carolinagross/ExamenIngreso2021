@@ -25,7 +25,7 @@ let promedioM;
 let edadnoremota ;
 let nombrenoremota;
 let flagremota =1;
-
+let cantidadmaterias;
 
 
 do{
@@ -77,8 +77,9 @@ acumNB = acumNB + nota;
 contNB ++;
 }//punto c
 
-if(tipo !="remota" &&(flagremota || edad <edadremota)){
-edadnoremota =edad;
+if(tipo !="remota" &&(flagremota || cantidad > cantidadmaterias)){
+cantidadmaterias = cantidad;
+	edadnoremota =edad;
 nombrenoremota = nombre;
 flag =0;
 }
@@ -86,6 +87,16 @@ flag =0;
 seguir = prompt("desea seguir ingresando alumnos");
 
 }while (seguir == "s")//parentesis del do
+if (contF != 0){
+promedioF = acumF/contF;
+}
+if (contM != 0 ){
+promedioM = acumM/contM;
+}
+if (contNB != 0){
+promedioNB = acumNB/contNB;
+}
+
 
 if (flagnomasculino == 1){
 	console.log("no se ingresaron  no masculinos")
@@ -96,18 +107,10 @@ console.log("no se ingresaron alumnos libres")
 } else {
 	console.log("El nombre del mas joven de los alumnos entre los que la dan libre " + nombrelibre);
 }
-if ( sexo == "f"){
-console.log("el promedio de los femeninos es " (promedioF = acumF/contF)
-} else if (sexo =="m"){
-console.log("elmejor promedio masculino es"promedioM = acumM/contM);
-} else{
-	console.log(promedioNB = acumNB/contNB);
-}
+
+console.log("proemdeio femenino " + promedioF + "promedio masculino " + promedioM + "promedio nobinario" + promedioNB); 
 
 if( flagremota==1){
-
-
-
 console.log("  la edad y nombre del que cursa ,as materias quer no sean en forma remota  " + edadnoremota + nombrenoremota);
 }
 
