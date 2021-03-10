@@ -108,7 +108,7 @@ console.log("no se ingresaron alumnos libres")
 	console.log("El nombre del mas joven de los alumnos entre los que la dan libre " + nombrelibre);
 }
 
-console.log("proemdeio femenino " + promedioF + "promedio masculino " + promedioM + "promedio nobinario" + promedioNB); 
+console.log("proemdeio femeninooooooooooooooooooo " + promedioF + "promedio masculino " + promedioM + "promedio nobinario" + promedioNB); 
 
 if( flagremota==1){
 console.log("  la edad y nombre del que cursa ,as materias quer no sean en forma remota  " + edadnoremota + nombrenoremota);

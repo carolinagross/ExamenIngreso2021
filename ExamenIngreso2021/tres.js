@@ -68,7 +68,7 @@ preciosindescuento = CONSTPRECIO * totalpasajeros; // punto c
  
 
 
-console.log("el viaje total sin descuento es "+ preciosindescuento);
+console.log("el viaje total sin descuentooooooooooooooooooooooooo es "+ preciosindescuento);
 
  if (contMayores > totalpasajeros*50/100 ){
 	precioFinal=  preciosindescuento - preciosindescuento * 25/100;
@@ -78,8 +78,9 @@ console.log("el viaje total sin descuento es "+ preciosindescuento);
 
 
 
-  console.log("los viudos mayres de 60 son " + contMayoresViudos);
-  console.log("la mujer soltera mas joven se llama " + nombreMinimo +"y tiene " + edadMinima );
- 
+  console.log("los viudos mayores de 60 son " + contMayoresViudos);
   
-}// corchete de la funcio 
+  console.log("la mujer soltera mas joven se llamaaaa " + nombreMinimo +"y tiene " + edadMinima );
+  }
+  
+// corchete de la funcio 

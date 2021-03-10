@@ -101,9 +101,9 @@ if (acumIgnifugo > acumCombustible && acumIgnifugo > acumExplosivo){
 
 
 
-console.log ( "A- promedio alcohol "+ promedioA + "promedioIac " + promedioI + "promedioQuat" + promedioQ);
+console.log ( "A- promedioooo alcohol "+ promedioA + "promedioIac " + promedioI + "promedioQuat" + promedioQ);
 console.log("B- la categoria con mas cantidad de unidades " + maxTipo);
 console.log(" C- se compraron " + contIacBarato + "de iac menos o igual de $200");
-console.log("D-la marca y el tipo mas caro sonnnnnnnnnnnnnnnnnnnnnn: "+ marcaMax + tipoMax)
+console.log("D-la marca y el tipo masssssssssssssssssssssssss caro sonnnnnnnnnnnnnnnnnnnnnn: "+ marcaMax + tipoMax)
 
 }//corchete de funcion
